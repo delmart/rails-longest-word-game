@@ -1,0 +1,15 @@
+<h1>DA LONGEST WORD GAME</h1>
+
+<h2>Grid</h2>
+
+<div>
+  <%= session[:grid] %>
+</div>
+
+<h2>Your Answer</h2>
+
+<form action="<%= score_path %>" method="get">
+  <input type="text" name="answer" placeholder="Your answer" />
+  <input type="hidden" name="start_time" value="<%= Time.now %>" />
+  <input type="submit" />
+</form>
